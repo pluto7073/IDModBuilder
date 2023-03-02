@@ -5,14 +5,16 @@ plugins {
 
 gradlePlugin {
     plugins {
-        simplePlugin {
-            id = 'io.innocentdream.idmodbuilder'
+        idModBuilderPlugin {
+            id = 'io.github.innocentdream.idmodbuilder'
+            displayName = 'IDModBuilder'
+            description = 'Assembles the mod for InnocentDream using modid.idmod.json and build.gradle'
             implementationClass = "io.innocentdream.idmodbuilder.IDModBuilder"
         }
     }
 }
 
-group 'io.innocentdream'
+group 'io.github.innocentdream'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -20,8 +22,6 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     gradleApi()
 }
 
